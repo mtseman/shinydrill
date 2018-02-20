@@ -1,5 +1,6 @@
 library(shiny)
 library(shinydashboard)
+library(DT)
 #--------------------------------------------------------------
 # Basic navbar bag with tabs for testing different drill downs
 #---------------------------------------------------------------
