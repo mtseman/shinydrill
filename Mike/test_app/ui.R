@@ -1,6 +1,8 @@
 library(shiny)
 library(shinydashboard)
 library(DT)
+
+
 #--------------------------------------------------------------
 # Basic navbar bag with tabs for testing different drill downs
 #---------------------------------------------------------------
@@ -15,11 +17,16 @@ navbarPage("Shiny Drill",
     <link href="css/shinydashboard.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
     <script src="js/app.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     ')
   ),
                    
   tabPanel("ValueBox",
     source("./ui_files/drillValueBox_UI.R",local=T)$value
+  ),
+  
+  tabPanel("ValueBox2",
+    source("./ui_files/drillValueBox2_UI.R",local=T)$value
   ),
   
   tabPanel("Pie"),

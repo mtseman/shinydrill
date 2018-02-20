@@ -18,12 +18,10 @@ output$testInfoBox_iris<-renderUI({
 
   #turn this into a function - paramters include what dataset you want to pull up in modal
   tagList(HTML('<div class="drill_infoBox" onclick= drilltest("iris") >'),
-    infoBox("Average Sepal Length of iris", value=8.84,icon = icon('leaf'), color = "green", width = 12,fill=T,href = NULL),
+    infoBox("Average Sepal Length of iris", value=5.84,icon = icon('leaf'), color = "green", width = 12,fill=T,href = NULL),
   HTML('</div>'))
 
 })
-
-
 
 #------------------------------
 # ObsereEvent and Modal Function
@@ -57,10 +55,10 @@ dataModal_InfoBox<-function(title='Complete Dataset for mtcars'){
 #--------------------------------------------
 #Dynamic Data Table for info boxes - listens to input$shinydrill_dataset to pick the data for the modal
 output$testInfoBox_DT<-DT::renderDataTable({
-  
+  df<-NULL
   if (input$shinydrill_dataset=='mtcars')(df<-mtcars)
   if (input$shinydrill_dataset=='iris')(df<-iris)
-  
+  if(is.null(df))(return(NULL))
   datatable(df)
   
   

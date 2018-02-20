@@ -1,3 +1,21 @@
 .drill_infoBox{
     cursor: pointer;
 }
+
+.info-box-icon-toledo {
+    border-radius: 2px 0 0 2px;
+    display: block;
+    float: left;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    font-size: 45px;
+    line-height: 90px;
+    background: rgba(0,0,0,.2);
+}
+
+.img-toledo {
+    vertical-align: middle;
+    height: 100%;
+    padding: 5px;
+}
