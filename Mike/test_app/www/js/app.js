@@ -7,7 +7,7 @@ $(".drill_infoBox").click(function(){
 
 function drilltest() {
      
-     
+       alert('Hi! - You clicked me, now send info back to shiny to open modal');
        console.log('hello');
    
 }
