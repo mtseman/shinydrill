@@ -7,6 +7,7 @@ library(DT)
 
 navbarPage("Shiny Drill",
   
+  #include these css and js files so we get the styling of the shinydashboard in a more basic navbarpage.
   header=tags$head(HTML('
     <!-- Shiny dashboard and admin LTE styles and js -->
     <link href="css/AdminLTE.min.css" rel="stylesheet">
