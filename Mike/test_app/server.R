@@ -1,3 +1,8 @@
+library(shiny)
+library(shinydashboard)
+library(DT)
+library(collapsibleTree)
+
 server <- function(input, output,session) { 
   
 
@@ -12,6 +17,10 @@ source("./server_files/drillValueBox.R",local=T)
 #----------------------------------------------------------------------------------------------------------------------
 source("./server_files/drillValueBox_toledo.R",local=T)
   
-
+#---------------------------------------------------------------------------------------------------------------------
+# Collapsible Tree
+#----------------------------------------------------------------------------------------------------------------------
+  
+source("./server_files/tree.R",local=T) 
   
 }
