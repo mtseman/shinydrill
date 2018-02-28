@@ -39,11 +39,15 @@ ui<-dashboardPage(
   dashboardHeader(),
   dashboardSidebar(),
   dashboardBody(
-      InfoBoxModal_UI("InfoBox")
+    
+      fluidRow(column(12,h3('Here is example of clickable infobox. It uses shinyjs for the onclick event and has been turned into a shiny Module'))),
+      InfoBoxModal_UI("InfoBox"),
       
-      fluidRow(column(12,h3('Another info box we can click on, we can add icons and colors as parameters for the shiny module, but for now its the same')))
-      fluidRow(column(12,h3('But, The nice thing is it is a function that can be used over and over, adds click-abilty to value box and uses ... so modal can be whatever elements user wishes')))
+      fluidRow(column(12,h3('Another info box we can click on, we can add icons and colors as parameters for the shiny module, but for now its the same'))),
+      fluidRow(column(12,h3('But, The nice thing is it is a function that can be used over and over to create more boxes. A nice feature is the function allows for arbitary UI elements to be displayed in the modal. You pass a tagList of the things you want displayed.'))),
       InfoBoxModal_UI("InfoBox2")
+      
+      
       
       
   )
