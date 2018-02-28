@@ -8,7 +8,7 @@ library(collapsibleTree)
 #---------------------------------------------------------------
 
 navbarPage('ShinyDrill',
-  #h2('hello')
+  
   #include these css and js files so we get the styling of the shinydashboard in a more basic navbarpage.
   header=tags$head(HTML('
     <!-- Shiny dashboard and admin LTE styles and js -->
@@ -20,10 +20,7 @@ navbarPage('ShinyDrill',
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     ')
   ),
-
-  tabPanel("CollapsibleTree",
-    source("./ui_files/tree_UI.R",local=T)$value
-  ),
+  
   
   tabPanel("ValueBox",
     source("./ui_files/drillValueBox_UI.R",local=T)$value
@@ -32,8 +29,10 @@ navbarPage('ShinyDrill',
   tabPanel("ValueBox2",
     source("./ui_files/drillValueBox2_UI.R",local=T)$value
   ),
-
   
+  tabPanel("CollapsibleTree",
+    source("./ui_files/tree_UI.R",local=T)$value
+  ),
 
   tabPanel("Pie"),
 
