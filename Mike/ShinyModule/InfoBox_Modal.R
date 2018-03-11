@@ -1,38 +1,9 @@
 library(shiny)
 library(shinyjs)
 library(shinydashboard)
+install_github('shinyModals','mtseman')
 
-InfoBoxModal_UI<-function(id){
-    
-    ns<-NS(id)
-    
-    tagList(
-      useShinyjs(),
-      
-      tags$div(id=ns("box1"),style="cursor:pointer;",
-        
-        infoBox("Average mpg of mtcars", value=20.09,icon = icon('car'), color = "blue", width = 4,fill=T,href = NULL)
-      ))
-    
-  
-} 
 
-InfoBoxModal<-function(input,output,session,...){ 
-  
-  
-    onclick("box1",showModal(dataModal_InfoBox(title=paste('Complete data set for ',"mtcars",sep=''))))
-                                            
-    dataModal_InfoBox<-function(title='Complete Dataset for mtcars'){
-      
-      modalDialog(title=HTML(paste('<center><h3>',title,'</h3></center>')),size='l',
-        
-                 
-                  ...
-                            
-      
-        )
-    }
-}
 
 ui<-dashboardPage(
   

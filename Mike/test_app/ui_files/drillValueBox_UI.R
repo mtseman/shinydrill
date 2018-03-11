@@ -1,3 +1,5 @@
+
+tab1<-function(){
 tabItem('valuebox_test',
 
       
@@ -8,3 +10,4 @@ fluidRow(column(4,uiOutput('testInfoBox_mtcars')),
        
 
 )
+}

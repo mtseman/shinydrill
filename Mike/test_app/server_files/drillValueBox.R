@@ -5,6 +5,9 @@
 #
 # What I did was wrap the standard infoBox function with an additonal div that there allows for modified css 
 # (pointer style cursor) and js on click function. For each invo box, specify what dataset you wnat in the modal as an arguement to the onclick function
+
+
+
 output$testInfoBox_mtcars<-renderUI({
 
   #turn this into a function - paramters include what dataset you want to pull up in modal
@@ -39,12 +42,14 @@ observeEvent(input$shinydrill,{
 
 
 
+
+
+
 dataModal_InfoBox<-function(title='Complete Dataset for mtcars'){
   
   modalDialog(title=HTML(paste('<center><h3>',title,'</h3></center>')),size='l',
     
-              
-              DT::dataTableOutput('testInfoBox_DT')      
+              DT::dataTableOutput('testInfoBox_DT') 
                         
   
     )
@@ -59,6 +64,7 @@ output$testInfoBox_DT<-DT::renderDataTable({
   if (input$shinydrill_dataset=='mtcars')(df<-mtcars)
   if (input$shinydrill_dataset=='iris')(df<-iris)
   if(is.null(df))(return(NULL))
+  df<-mtcars
   datatable(df)
   
   
