@@ -1,7 +1,9 @@
 library(shiny)
 library(shinyjs)
 library(shinydashboard)
-install_github('shinyModals','mtseman')
+library(DT)
+library(devtools)
+install_github('mtseman/shinyModals')
 
 
 
