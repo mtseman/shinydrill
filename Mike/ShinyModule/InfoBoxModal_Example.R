@@ -4,8 +4,9 @@ library(shinydashboard)
 library(DT)
 library(devtools)
 library(shinyBS)
+#install package initially and again for updates
 #install_github('mtseman/shinyModals',force=T)
-#library(shinyModals)
+library(shinyModals)
 
 
 
